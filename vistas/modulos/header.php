@@ -69,7 +69,7 @@
                     <use xlink:href="vistas/assets/node_modules/@coreui/icons/sprites/free.svg#cil-settings"></use>
                   </svg> Settings</a><a class="dropdown-item" href="#">
 
-                <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
+                <div class="dropdown-divider"></div><a class="dropdown-item" href="<?php echo RUTA ?>?cerrar_sesion=1">
                   <svg class="icon me-2">
                     <use xlink:href="vistas/assets/node_modules/@coreui/icons/sprites/free.svg#cil-account-logout"></use>
                   </svg> Logout</a>

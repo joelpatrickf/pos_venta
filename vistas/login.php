@@ -1,3 +1,4 @@
+<?php require_once "constantes.php"; ?>
 <!DOCTYPE html>
 
 
@@ -31,7 +32,7 @@
                       <svg class="icon">
                         <use xlink:href="vistas/assets/node_modules/@coreui/icons/sprites/free.svg#cil-user"></use>
                       </svg></span>
-                    <input class="form-control" id="iptUsuario" type="text" placeholder="Correo Electrónico">
+                    <input class="form-control" id="iptUsuario" type="text" placeholder="Correo Electrónico" value="admin">
                   </div>
                   <div class="input-group mb-4"><span class="input-group-text">
                       <svg class="icon">
@@ -78,18 +79,18 @@
         dataType: 'json',
         success:function(respuesta){
             console.log(respuesta);            
-            // if (respuesta === 'no'){
-            //   //toastr["error"](" Credenciales Incorrectas", "!Atención!");
-            //   alert("credenciall incorrect");
-            //   $("#iptUsuario").val("");
-            //   $("#iptPassword").val("");
-            //   return;
+            if (respuesta === 'no'){
+              //toastr["error"](" Credenciales Incorrectas", "!Atención!");
+              alert("credenciall incorrect");
+              $("#iptUsuario").val("");
+              $("#iptPassword").val("");
+              return;
               
-            // }else{
-            //   var rutaJs = '<?php echo RUTA ?>';
-            //   window.location = rutaJs;
+            }else{
+              var rutaJs = '<?php echo RUTA ?>';
+              window.location = rutaJs;
                 
-            // }
+            }
         }
     });
     });  

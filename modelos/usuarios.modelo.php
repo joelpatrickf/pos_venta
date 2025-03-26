@@ -10,9 +10,9 @@ class UsuariosModelo{
         VALIDAR LOGIN # 1
       ==============================*/
 	static public function mdlIniciarSesion($usuario,$password)	{
-		print_r($usuario);
-		echo "<br>";
-		print_r($password);
+		// print_r($usuario);
+		// echo "<br>";
+		// print_r($password);
 
 		// $stmt = Conexion::conectar()->prepare("");
 		// $stmt->bindParam(":usuario",$usuario,PDO::PARAM_STR);
@@ -21,11 +21,12 @@ class UsuariosModelo{
 		
         // $res = $stmt ->fetchAll(PDO::FETCH_CLASS);
 		
-        // if (!empty($res)) {
-        //     $_SESSION['usuario'] = $res[0]; // almacena la respuesta en una sesion
-        // }
+        
+        if ($usuario == 'admin') {
+            $_SESSION['usuario'] = $usuario; // almacena la respuesta en una sesion
+        }
 
-        // return $res;
+        return $_SESSION['usuario'];
 	}
 
 
